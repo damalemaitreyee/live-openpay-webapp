@@ -1,0 +1,29 @@
+.search-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  margin-top: 2rem;
+}
+.search-by {
+  margin-left: 2rem;
+}
+
+.search-bar {
+  grid-column: 2 / 4;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+.suggestions-container {
+  grid-column: 2 / 4;
+  max-height: 300px;
+  border: 1px solid #dee2e6;
+  border-radius: 1rem;
+  overflow: scroll;
+}
+.suggestions-container li:hover {
+  background: lightgray;
+  text-decoration: underline;
+}
