@@ -23,7 +23,10 @@ const Search = (props) => {
       },
       body: JSON.stringify(searchBody),
     };
-    fetch("http://localhost:8080/api/payments?limit=10&offset=0", options)
+    fetch(
+      "https://payment-search-deployment.onrender.com/api/payments?limit=10&offset=0",
+      options
+    )
       .then((response) => response.json())
       .then((data) => {
         setSuggestions(data?.payments);

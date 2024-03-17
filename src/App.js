@@ -37,7 +37,7 @@ function App() {
       body: JSON.stringify(searchBody),
     };
     fetch(
-      `http://localhost:8080/api/payments?limit=${recordsPerPage}&offset=${offset}`,
+      `https://payment-search-deployment.onrender.com/api/payments?limit=${recordsPerPage}&offset=${offset}`,
       options
     )
       .then((response) => response.json())
@@ -62,7 +62,7 @@ function App() {
       body: JSON.stringify(searchBody),
     };
     const response = await fetch(
-      `http://localhost:8080/api/payments/export?limit=${totalDataLength}&offset=${offset}`,
+      `https://payment-search-deployment.onrender.com/api/payments/export?limit=${totalDataLength}&offset=${offset}`,
       options
     );
     if (!response.ok) {
@@ -88,9 +88,12 @@ function App() {
   };
 
   const getFields = async () => {
-    fetch("http://localhost:8080/api/payments/search-fields", {
-      method: "GET",
-    })
+    fetch(
+      "https://payment-search-deployment.onrender.com/api/payments/search-fields",
+      {
+        method: "GET",
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         setSearchFields(data);
