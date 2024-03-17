@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/live-openpay-webapp/static/css/main.e9c20c5a.css",
+    "main.js": "/live-openpay-webapp/static/js/main.968652ad.js",
+    "static/js/453.00e6dd67.chunk.js": "/live-openpay-webapp/static/js/453.00e6dd67.chunk.js",
+    "index.html": "/live-openpay-webapp/index.html",
+    "main.e9c20c5a.css.map": "/live-openpay-webapp/static/css/main.e9c20c5a.css.map",
+    "main.968652ad.js.map": "/live-openpay-webapp/static/js/main.968652ad.js.map",
+    "453.00e6dd67.chunk.js.map": "/live-openpay-webapp/static/js/453.00e6dd67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9c20c5a.css",
+    "static/js/main.968652ad.js"
+  ]
+}
