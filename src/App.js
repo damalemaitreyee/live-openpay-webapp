@@ -5,7 +5,8 @@ import "./App.css";
 import DataTable from "./components/DataTable";
 import Search from "./components/Search";
 import { saveAs } from "file-saver";
-
+import ReactGA from "react-ga";
+ReactGA.initialize("G-PZYFGVD88D");
 function App() {
   const [tableData, setTableData] = useState([]);
   const [totalDataLength, setTotalDataLength] = useState(0);
@@ -23,6 +24,10 @@ function App() {
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
   const pageCount = Math.ceil(totalDataLength / recordsPerPage);
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+    
+  });
   const fetchTableData = (field, searchText, offset) => {
     const searchBody = {
       property: [field],
